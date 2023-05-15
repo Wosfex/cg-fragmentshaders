@@ -141,6 +141,7 @@ export default {
         this.materials.ripple = this.createShaderMaterial('ripple', this.scene);
         this.materials.toon = this.createShaderMaterial('toon', this.scene);
         this.materials.custom = this.createShaderMaterial('custom', this.scene);
+        this.materials.custom2 = this.createShaderMaterial('custom2', this.scene);
 
         // Create video textures
         this.textures.video = new VideoTexture('video', BASE_URL + 'videos/dm_vector.mp4', this.scene, false,
@@ -153,6 +154,7 @@ export default {
         this.materials.ripple.setTexture('image', this.textures.video);
         this.materials.toon.setTexture('image', this.textures.video);
         this.materials.custom.setTexture('image', this.textures.video);
+        this.materials.custom2.setTexture('image', this.textures.video);
 
         // Create simple rectangle model
         let rect = new Mesh('rect', this.scene);
@@ -225,6 +227,9 @@ export default {
         <div id="custom_button" class="filter_button">
             <p id="custom">Custom</p>
         </div>
+        <div id="custom2_button" class="filter_button">
+            <p id="custom2">Custom2</p>
+        </div>
     </div>
     <div class="spacer"></div>
     <div>
@@ -295,7 +300,7 @@ input {
 .filter_button {
     display: inline-block;
     background-color: #6A6A6A;
-    width: 8rem;
+    width: 7rem;
     height: 2.5rem;
     margin: 0.5rem;
     cursor: pointer;
