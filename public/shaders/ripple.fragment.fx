@@ -6,7 +6,7 @@ in vec2 model_uv;
 
 // Uniforms
 uniform sampler2D image;
-// found out how to do this, just import time (it just works)
+// found out how to do this, just import time (it just works, with a little help in the VUE)
 uniform float time;
 
 

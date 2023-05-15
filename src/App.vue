@@ -188,8 +188,9 @@ export default {
             }
 
             if (this.textures[this.selected_texture] !== null) {
+                const time = performance.now() / 1000;
                 this.materials[this.filter].setTexture('image', this.textures[this.selected_texture]);
-            }
+                this.materials[this.filter].setFloat('time', time);            }
         });
 
         // Render every frame
